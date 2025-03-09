@@ -51,3 +51,43 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+nav {
+    background-color: #2c3e50;  /* Color de fondo */
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Alinear los elementos en una línea */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;  /* Cambio de color al pasar el cursor */
+}
+
+.home-icon {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.home-icon img {
+    width: 30px; /* Tamaño del ícono */
+    height: auto;
+}
