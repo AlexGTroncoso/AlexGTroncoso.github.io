@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Tesis</title>
@@ -8,33 +11,96 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="home-icon">
-                <img src="home-icon.png" alt="Inicio">
-            </a>
-            <ul>
-                <li><a href="generalidades.html">Generalidades</a></li>
-                <li><a href="variacion_vr.html">Variación en VR</a></li>
-                <li><a href="parametros_orbitales.html">Parámetros Orbitales y Masas</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/me.jpg" alt="Logo" class="logo">
+                <a href="sobre-mi.html" class="nombre">Alexander GT</a>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="boton">Inicio</a>
+                <a href="generalidades.html" class="boton">Generalidades</a>
+                <a href="variacion_vr.html" class="boton">Variación en VR</a>
+                <a href="parametros_orbitales.html" class="boton">Parámetros Orbitales y Masas</a>
+            </div>
         </nav>
     </header>
     
     <main>
-        <section class="intro">
-            <h1>Resultados de la Tesis</h1>
-            <p>Explora los principales hallazgos de mi investigación sobre astrofísica estelar.</p>
-
-        <section class="graphs">
-            <h2>Diagramas y Análisis</h2>
-            <div class="graph-container">
-                <img src="Imagen10.png" alt="Filtrado Nrich8">
+        <div class="container">
+            <!-- Primer contenedor: Tabla -->
+            <div class="box table-box">
+                <h2>Classification of the stars</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Star</th>
+                            <th>&gt;0.2 km/s</th>
+                            <th>0.1 - 0.2 km/s</th>
+                            <th>&lt;0.1 km/s</th>
+                            <th>Tag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>K-rich 1</td><td>0</td><td>2</td><td>1</td><td>Probable</td></tr>
+                        <tr><td>K-rich 2</td><td>0</td><td>0</td><td>4</td><td>Unknown</td></tr>
+                        <tr><td>Na-rich</td><td>4</td><td>0</td><td>0</td><td>Variable</td></tr>
+                        <tr><td>N-rich 1</td><td>4</td><td>0</td><td>0</td><td>Variable</td></tr>
+                        <tr><td>N-rich 2</td><td>2</td><td>2</td><td>1</td><td>Variable</td></tr>
+                        <tr><td>N-rich 3</td><td>3</td><td>1</td><td>2</td><td>Variable</td></tr>
+                        <tr><td>N-rich 4</td><td>3</td><td>0</td><td>0</td><td>Variable</td></tr>
+                        <tr><td>N-rich 5</td><td>0</td><td>2</td><td>4</td><td>Probable</td></tr>
+                        <tr><td>N-rich 6</td><td>0</td><td>2</td><td>1</td><td>Probable</td></tr>
+                        <tr><td>N-rich 7</td><td>2</td><td>2</td><td>4</td><td>Variable</td></tr>
+                        <tr><td>N-rich 8</td><td>3</td><td>0</td><td>0</td><td>Variable</td></tr>
+                        <tr><td>Si-rich</td><td>7</td><td>9</td><td>3</td><td>Variable</td></tr>
+                        <tr><td>s-rich</td><td>0</td><td>0</td><td>8</td><td>Unknown</td></tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
+
+
+            <!-- Segundo contenedor: Imagen fija -->
+            <div class="box image-box">
+                <h2 style="margin-top: 40px;">Variación de la VR</h2>
+                <img id = "Imagencentro" src="img/Imagen10_1.png" alt="">
+                <h2 style="margin-top: 40px;"></h2>
+            </div>
+
+            <!-- Tercer contenedor: Selector y cambio de imagen -->
+            <div class="box selection-box">
+                <label for="estrellas">Selecciona una estrella:</label>
+                    <select id="estrellas">
+                        <option value="Todas">Todas</option>
+                        <option value="K-rich 1">K-rich 1</option>
+                        <option value="K-rich 2">K-rich 2</option>
+                        <option value="Na-rich">Na-rich</option>
+                        <option value="N-rich 1">N-rich 1</option>
+                        <option value="N-rich 2">N-rich 2</option>
+                        <option value="N-rich 3">N-rich 3</option>
+                        <option value="N-rich 4">N-rich 4</option>
+                        <option value="N-rich 5">N-rich 5</option>
+                        <option value="N-rich 6">N-rich 6</option>
+                        <option value="N-rich 7">N-rich 7</option>
+                        <option value="N-rich 8">N-rich 8</option>
+                        <option value="Si-rich">Si-rich</option>
+                        <option value="s-rich">s-rich</option>
+                    </select>
+                <h2 id="estrella-nombre">Estrella</h2>
+                <img id= "estrellaImagen" src="img/Imagen10_2.png" alt="Imagen de estrella">
+                <h2 style="margin-top: 40px;"></h2>
+            </div>
+        </div>
+        
+        
+    
     </main>
     
     <footer>
-        <p>© 2025 - Investigación en Astrofísica Estelar</p>
+        <p>© 2025 - Alexander GT - FACom</p>
     </footer>
+
+<script src="script2.js"></script>
+
 </body>
 </html>
+
