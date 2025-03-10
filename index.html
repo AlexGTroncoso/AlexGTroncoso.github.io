@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Tesis</title>
@@ -8,39 +11,93 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="home-icon">
-                <img src="home-icon.png" alt="Inicio">
-            </a>
-            <ul>
-                <li><a href="generalidades.html">Generalidades</a></li>
-                <li><a href="variacion_vr.html">Variación en VR</a></li>
-                <li><a href="parametros_orbitales.html">Parámetros Orbitales y Masas</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/me.jpg" alt="Logo" class="logo">
+                <a href="sobre-mi.html" class="nombre">Alexander GT</a>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="boton">Inicio</a>
+                <a href="generalidades.html" class="boton">Generalidades</a>
+                <a href="variacion_vr.html" class="boton">Variación en VR</a>
+                <a href="parametros_orbitales.html" class="boton">Parámetros Orbitales y Masas</a>
+            </div>
         </nav>
     </header>
     
     <main>
+        
         <section class="intro">
-            <h1>Resultados de la Tesis</h1>
-            <p>Explora los principales hallazgos de mi investigación sobre astrofísica estelar.</p>
-        </section>
-        
-        <section class="abstract">
             <h2>Abstract</h2>
-            <p>Aquí irá un resumen breve del proyecto, destacando sus principales objetivos y hallazgos.</p>
+            <p>Reportamos la identificación de ocho objetos con variabilidad en velocidad radial y peculiaridades químicas, cuya variabilidad excede la incertidumbre
+                instrumental del espectrógrafo FIDEOS. Estudios previos han explorado la posibilidad de que el enriquecimiento químico observado en algunas estrellas
+                peculiares en el campo estelar pueda deberse a una transferencia de masa en el pasado. En este trabajo, utilizamos datos de velocidad radial obtenidos 
+                con el espectrógrafo de fibra óptica de doble échelle (FIDEOS) en el telescopio ESO-1m, ubicado en el Observatorio de La Silla, Chile. Las observaciones
+                fueron registradas por la Universidad Católica del Norte (UCN) durante el año 2022, con una resolución espectral de \( R \sim 43000 \). Los datos fueron 
+                procesados utilizando la tubería de reducción CERES para obtener curvas de velocidad radial, las cuales fueron posteriormente analizadas con The Joker, 
+                un muestreador basado en Monte Carlo optimizado para problemas de dos cuerpos.  
+
+                Encontramos que la estrella TYC 4686-2039-1 podría albergar una enana blanca como compañera, con una masa de \( 0.5174_{-0.0024}^{+0.0021} ~M_\odot \).
+                Además, identificamos cinco objetos con compañeros subestelares en el rango de enanas rojas y marrones (\( 0.016_{-0.003}^{+0.005} \) a 
+                \( 0.12_{-0.03}^{+0.12} ~M_\odot \)). Finalmente, dos sistemas sugieren la presencia de compañeros de masa planetaria con masas similares a Júpiter de
+                \( 0.0078_{-0.0009}^{+0.0034} ~M_\odot \) y \( 0.00197_{-0.00005}^{+0.00014} ~M_\odot \). Estos resultados sugieren que el enriquecimiento químico característico
+                de estas estrellas peculiares podría estar vinculado a una diversa gama de compañeros binarios, que incluyen objetos estelares, subestelares y planetarios.
+                
+                </p>
         </section>
-        
-        <section class="generalidades">
-            <h2>Generalidades</h2>
-            <p>Información introductoria y contexto de la investigación.</p>
+
+        <hr class="separator">
+
+        <section class="intro">
+            <div class="content">
+                <figure>
+                    <img src="img/FIDEOS2.jpg" alt="Descripción de la imagen" class="image">
+                    <figcaption>Créditos: Equipo de FIDEOS, Observatorio de La Silla.</figcaption>
+                </figure>
+                <div class="text">
+
+                    <h2>Instrumentos</h2>
+                    <p>
+                        Los espectros utilizados en este estudio fueron obtenidos con el espectrógrafo FIDEOS, que opera a una resolución de \( R \sim 43000 \) en el rango 
+                        espectral visible. Este instrumento está montado en el telescopio ESO-1m en el Observatorio de La Silla en Chile (LSOM), operado por la ESO 
+                        <a href="https://www.eso.org/public/">(ESO)</a>. Los datos fueron adquiridos entre el 28 de enero de 2022 y el 22 de diciembre de 2022. Se obtuvieron 
+                        un total de 101 espectros de alta resolución para las estrellas analizadas en este trabajo. 
+                        FIDEOS está estabilizado térmicamente y montado sobre soportes antivibración para garantizar alta estabilidad en las mediciones. La estabilidad en la 
+                        velocidad radial (RV) es ligeramente inferior a \(30\) km/h en múltiples noches consecutivas de observación (<a href="#ref1">Vanzi et al. 2018</a>). 
+                        </p>
+                        
+                        <p>
+                        Además, Vanzi et al. (2018) demuestran que el instrumento puede alcanzar una magnitud límite de \( V=11 \) con una relación señal-ruido (S/N) de 10
+                        en un tiempo de exposición de 30 minutos, logrando una precisión en RV de aproximadamente \( \sim 8\, \text{m s}^{-1} \) en el cielo. 
+                        El instrumento cubre un rango de longitud de onda desde \( 4200 \) hasta \( 8000 \) Å en el espectro visible, con una resolución espacial de 19 
+                        segundos de arco.
+                        </p>
+                        
+                        <p>
+                        Para la reducción, extracción, análisis y calibración de los espectros adquiridos con el instrumento FIDEOS, se implementó una Colección de Rutinas 
+                        Elementales para Espectros Échelle, conocida por su acrónimo en inglés CERES. 
+                        El objetivo principal de estas rutinas es desarrollar procesos completamente automatizados capaces de generar espectros extraídos y homogeneizados de
+                        manera óptima (<a href="#ref2">Brahm et al. 2017</a>).
+                        </p>
+                        
+                        <p>
+                        En este trabajo, la relación señal-ruido (S/N) de los espectros generalmente varió entre \(14\) y \(114\), con un promedio de \(33\). Estos valores 
+                        corresponden principalmente a estrellas de tipo G, para las cuales se usaron tiempos de exposición de \(1800\) s en la mayoría de los objetivos 
+                        (ver <a href="#tab:objects_observation">Tabla de objetos observados</a>). 
+                        Estos parámetros de observación fueron seleccionados para lograr un buen equilibrio entre la calidad de la señal y el tiempo total de observación, 
+                        asegurando una cobertura adecuada de las características espectroscópicas de las estrellas, en particular las variaciones en RV, que son cruciales 
+                        para analizar la presencia de compañeros estelares o subestelares.
+                        </p>
+                
+                </div>
+            </div>
         </section>
         
     
     </main>
     
     <footer>
-        <p>© 2025 - Investigación en Astrofísica Estelar</p>
+        <p>© 2025 - Alexander GT - FACom</p>
     </footer>
 </body>
 </html>
