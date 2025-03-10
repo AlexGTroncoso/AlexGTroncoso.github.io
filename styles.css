@@ -177,6 +177,12 @@ nav ul li a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.boton.activo {
+    background-color: #5c374c !important;
+    color: white !important;
+    border-color: #5c374c !important;
+}
+
 .boton:hover {
     background-color: #5c374c;
     color: white;
