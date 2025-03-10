@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     margin: 0;
@@ -7,8 +7,15 @@ body {
     text-align: center;
 }
 
+/* body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+} */
+
 header {
-    background-color: #2c3e50;
+    background-color: #d9d9d9;
     color: white;
     padding: 20px 0;
 }
@@ -17,9 +24,33 @@ h1, h2 {
     margin: 10px 0;
 }
 
+
 .intro {
-    margin: 20px;
+    margin: 200px;
     font-size: 18px;
+    text-align: justify; /* Justifica el texto en todo el ancho disponible */ 
+}
+.content {
+    display: flex; /* Alinea la imagen y el texto en la misma fila */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+.text {
+    flex: 1; /* Hace que el texto ocupe el espacio restante */
+    text-align: justify;
+}
+
+.image {
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
 }
 
 .graphs {
@@ -30,6 +61,7 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .graph-container {
     display: flex;
@@ -45,15 +77,25 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Hace que el contenido principal empuje el footer hacia abajo */
+}
 footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 0;
+    background-color: #d9d9d9;
+    color: #333;
+    padding: 10px;
     margin-top: 20px;
 }
 
 nav {
-    background-color: #2c3e50;  /* Color de fondo */
+    background-color: #d9d9d9;  /* Color de fondo */
     padding: 15px;
     text-align: center;
 }
@@ -81,6 +123,74 @@ nav ul li a:hover {
     color: #f39c12;  /* Cambio de color al pasar el cursor */
 }
 
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 10px 100px;
+}
+
+/* Contenedor del logo y nombre */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+/* Nombre con enlace */
+.nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.nombre:hover {
+    color: #5c374c;
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* Botones del menú */
+.boton {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid #444;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    transition: all 0.3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #5c374c;
+    color: white;
+    border-color: #5c374c;
+}
+
+/* Botón activo */
+.activo {
+    background-color: #5c374c;
+    color: white;
+    border-color: #5c374c;
+}
+
+
 .home-icon {
     display: inline-block;
     margin-right: 20px;
@@ -88,6 +198,173 @@ nav ul li a:hover {
 }
 
 .home-icon img {
-    width: 30px; /* Tamaño del ícono */
+    width: 30px; /* Ajusta el tamaño del icono */
     height: auto;
+    vertical-align: middle; /* Asegura alineación con el texto */
+}
+
+.separator {
+    border: none;
+    height: 2px;  /* Grosor de la línea */
+    background-color: #ccc; /* Color de la línea */
+    margin: 0px auto; /* Espaciado arriba y abajo */
+    width: 80%; /* Ajusta el ancho de la línea */
+}
+
+.generalidades {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra en la página */
+    gap: 20px; /* Espacio entre el gráfico y el cuadro de información */
+    padding: 20px;
+}
+
+.grafico img {
+    width: 400px; /* Ajusta el tamaño del gráfico */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.info {
+    max-width: 500px; /* Limita el ancho del cuadro de información */
+    background-color: #ffffff; /* Fondo suave */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.menu {
+    margin-bottom: 10px;
+}
+
+select {
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+select:hover {
+    border-color: #5c374c; /* Color del menú principal */
+}
+
+select:focus {
+    border-color: #5c374c;
+    box-shadow: 1px 1px 8px #5c374c80;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center;
+    gap: 20px; /* Espacio entre el gráfico y el cuadro de información */
+    padding: 20px;
+}
+
+/* Panel izquierdo */
+.left-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen con la clase .image */
+.image {
+    width: 500px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Panel derecho */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px; /* Para mantener un tamaño uniforme */
+}
+
+/* Contenedor del selector */
+.selection-container {
+    display: flex;
+    align-items: center; /* Alinea el texto y el select */
+    gap: 10px; /* Espacio entre el label y el select */
+    margin-bottom: 15px;
+}
+
+/* Select estilizado */
+#estrellas {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Cuadro de información */
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ajuste de ancho para que coincida con la imagen */
+    text-align: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    min-width: 280px;
+    text-align: center;
+}
+
+.table-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-box th, .table-box td {
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+.image-box img, .selection-box img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.image2 {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+.resaltado {
+    background-color: yellow !important; /* Cambia el color de fondo */
+    font-weight: bold; /* Opcional: hace que el texto se vea más fuerte */
 }
