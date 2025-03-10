@@ -94,3 +94,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let botones = document.querySelectorAll(".boton");
+    let currentPage = window.location.pathname.split("/").pop(); // Obtiene el nombre del archivo actual
+
+    botones.forEach(boton => {
+        if (boton.getAttribute("href") === currentPage) {
+            boton.classList.add("activo");
+        }
+    });
+});
