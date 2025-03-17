@@ -1,44 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="img/logo2.png">
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
+            ]
+        });
+    });
+    </script>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Tesis</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html" class="home-icon">
-                <img src="home-icon.png" alt="Inicio">
-            </a>
-            <ul>
-                <li><a href="generalidades.html">Generalidades</a></li>
-                <li><a href="variacion_vr.html">Variación en VR</a></li>
-                <li><a href="parametros_orbitales.html">Parámetros Orbitales y Masas</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/logo2.png" alt="Logo" class="logo">
+                <a href="sobre-mi.html" class="nombre">Alexander GT</a>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="boton">Inicio</a>
+                <a href="generalidades.html" class="boton">Generalidades</a>
+                <a href="variacion_vr.html" class="boton">Variación en VR</a>
+                <a href="parametros_orbitales.html" class="boton">Parámetros Orbitales y Masas</a>
+            </div>
         </nav>
     </header>
     
     <main>
-        <section class="intro">
-            <h1>Resultados de la Tesis</h1>
-            <p>Explora los principales hallazgos de mi investigación sobre astrofísica estelar.</p>
-        </section>
+        <div class="contenedor-parametros">
 
-        
-        <section class="graphs">
-            <h2>Diagramas y Análisis</h2>
-            <div class="graph-container">
-                <img src="Filtrado_Nrich8.png" alt="Filtrado Nrich8">
-                <img src="Corr_Nrich8.png" alt="Correlación Nrich8">
+            <!-- Tercer contenedor: Selector y cambio de imagen -->
+            <div class="box2 image-box selection-box">
+                <label for="estrellas">Selecciona una estrella:</label>
+                    <select id="estrellas">
+                        <option value="Na-rich">Na-rich</option>
+                        <option value="N-rich 1">N-rich 1</option>
+                        <option value="N-rich 2">N-rich 2</option>
+                        <option value="N-rich 3">N-rich 3</option>
+                        <option value="N-rich 4">N-rich 4</option>
+                        <option value="N-rich 7">N-rich 7</option>
+                        <option value="N-rich 8">N-rich 8</option>
+                        <option value="Si-rich">Si-rich</option>
+                    </select>
+                <h2 id="estrella-nombre">Estrella</h2>
+                <img id= "estrellaImagen" src="img/Corr_Narich.png" alt="Imagen de estrella">
+                <h2 style="margin-top: 40px;"></h2>
             </div>
-        </section>
+
+            <!-- Segundo contenedor: Imagen fija -->
+            <div class="panel box2 image-box">
+                <h2 style="margin-top: 15px;"></h2>
+                <img id = "Imagencentro" src="img/Mass_Narich.png" alt="">
+                <h2 style="margin-top: 40px;"></h2>
+            </div>
+            
+            <!-- Cuadro de información -->
+            <div class="box2 resultados">
+                <h2 id="estrella-nombre">Resumen de parámetros</h2>
+                <p id="parametros">
+                    \[
+                    \begin{array}{rl}
+                        ID-TYC: & TYC6908-1643-1 \\
+                        APOGEE: & ... \\
+                        FIDEOS: & -80.62 ± 0.62~ [km ~s^{-1}] \\
+                        T_m: & 44.26~\text{[min]}\\
+                        N: & 4\\
+                        M: & 894909 \\
+                        P: & 5.02_{-0.01}^{+0.12} \text{ [day]} \\ 
+                        e: & 0.02_{-0.02}^{+0.36} \\ 
+                        \omega: & 1.57_{-1.86}^{+2.18} \text{ [deg]} \\ 
+                        \Phi_0: & 2.02_{-4.07}^{+0.19} \text{ [deg]} \\ 
+                        K: & 0.85_{-0.20}^{+4.73} \text{ [km~s^{-1}]} \\ 
+                        V_0: & -80.6_{-2.2}^{+1.5} \text{ [km~s^{-1}]} \\ 
+                        \text{Mass}: & 0.03_{-0.02}^{+0.12} \text{ [M_{\odot}]} 
+                    \end{array}
+                    \]
+                </p>
+
+                
+            </div>
+            <!-- Ventana Emergente (Modal) -->
+            <div class="">
+                <h2 style="margin-top: 40px;"></h2>
+                <button id="mostrar-panel" class="btn">Distribución de parámetros</button>
+                <h2 style="margin-top: 40px;"></h2>
+                <button id="mostrar-panel1" class="btn">Órbita en Fase</button>
+                <h2 style="margin-top: 40px;"></h2>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-contenido">
+                    <span id="cerrar-modal" class="cerrar">&times;</span>
+                    <div class="panel img">
+                        <img id = "ImagenParametros" src="img/Parametros_Narich.png" alt="Gráfico VR">
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal1" class="modal">
+                <div class="modal-contenido1">
+                    <span id="cerrar-modal1" class="cerrar">&times;</span>
+                    <div class="panel image3">
+                        <img id = "ImagenFase" src="img/Phase_Narich.png" alt="Gráfico VR">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Panel 4: Gráfico (abajo de las imágenes) -->
+            <div class="panel panel-orbitas">
+                <img id = "ImagenOrbita" src="img/Filtrado_Narich.png" alt="">
+            </div>
+        </div>
+        
+        
+    
     </main>
     
     <footer>
-        <p>© 2025 - Investigación en Astrofísica Estelar</p>
+        <p>© 2025 - Alexander GT - FACom</p>
     </footer>
+
+<script src="script3.js"></script>
+
 </body>
 </html>
+
