@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="img/me.jpg" alt="Logo" class="logo">
+                <img src="img/logo2.png" alt="Logo" class="logo">
                 <a href="sobre-mi.html" class="nombre">Alexander GT</a>
             </div>
             <div class="menu">
@@ -29,7 +29,9 @@
     <main>
         <div class="container">
             <!-- Panel izquierdo con el gráfico -->
+             <h2 style="margin-top: 40px;"></h2>
             <div class="left-panel">
+                
                 <img src="img/Diagrama_HR.png" alt="Diagrama H-R" class="image">
             </div>
         
@@ -52,16 +54,57 @@
                         <option value="Si-rich">Si-rich</option>
                         <option value="s-rich">s-rich</option>
                     </select>
+                    <div class="">
+                        <button id="mostrar-panel" class="btn">Magnitudes</button>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-contenido">
+                            <span id="cerrar-modal" class="cerrar">&times;</span>
+                            <div class="tabla">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>B</th>
+                                            <th>V</th>
+                                            <th>plx</th>
+                                            <th>M<sub>V</sub></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>K-rich 1</td><td>12.210</td><td>10.950</td><td>1.4060</td><td>1.689927</td></tr>
+                                        <tr><td>K-rich 2</td><td>10.790</td><td>9.760</td><td>1.7244</td><td>0.943190</td></tr>
+                                        <tr><td>Na-rich</td><td>11.200</td><td>10.400</td><td>0.4702</td><td>-1.238587</td></tr>
+                                        <tr><td>N-rich 1</td><td>12.273</td><td>11.204</td><td>0.4280</td><td>-0.638781</td></tr>
+                                        <tr><td>N-rich 2</td><td>11.587</td><td>10.701</td><td>0.9221</td><td>0.524890</td></tr>
+                                        <tr><td>N-rich 3</td><td>11.760</td><td>10.650</td><td>0.3789</td><td>-1.457377</td></tr>
+                                        <tr><td>N-rich 4</td><td>12.900</td><td>11.410</td><td>0.1543</td><td>-2.648170</td></tr>
+                                        <tr><td>N-rich 5</td><td>11.750</td><td>10.730</td><td>1.1027</td><td>0.942287</td></tr>
+                                        <tr><td>N-rich 6</td><td>12.280</td><td>11.040</td><td>0.2488</td><td>-1.980748</td></tr>
+                                        <tr><td>N-rich 7</td><td>12.188</td><td>10.689</td><td>0.3263</td><td>-1.742915</td></tr>
+                                        <tr><td>N-rich 8</td><td>12.360</td><td>11.400</td><td>0.7111</td><td>0.659653</td></tr>
+                                        <tr><td>Si-rich</td><td>11.560</td><td>10.620</td><td>0.6307</td><td>-0.380886</td></tr>
+                                        <tr><td>s-rich</td><td>9.300</td><td>8.400</td><td>2.0975</td><td>0.008510</td></tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        
+                
                 <!-- Cuadro de información -->
                 <div class="card">
-                    <h2 id="estrella-nombre">Estrella</h2>
-                    <p id="estrella-info">Descripción sobre la estrella N-rich 1. Información relevante sobre esta categoría.</p>
+                    <h2 id="estrella-nombre">Estrellas químicamente peculiares</h2>
+                    <p id="estrella-info">Los objetos de estudio son estrellas químicamente peculiares, caracterizadas por abundancias inusuales en su composición. Esto sugiere procesos físicos o evolutivos diferenciados en su historia estelar. Según su ubicación en el diagrama de Hertzsprung-Russell, se encuentran principalmente en la región de las gigantes rojas (RG*). Su gran tamaño y alta luminosidad las distingue de otras gigantes más comunes. En el diagrama HR, los objetos de estudio (marcados en rojo) resaltan en comparación con otras poblaciones estelares. Se sitúan en la región de las gigantes, gigantes brillantes y supergigantes. Aunque comparten algunas características con otras estrellas similares, poseen propiedades específicas que los hacen únicos en su clase.</p>
+
                 </div>
+                
             </div>
+            
+            
         </div>
-        
+    
     
     </main>
     
