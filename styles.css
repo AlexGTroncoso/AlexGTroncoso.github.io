@@ -26,7 +26,10 @@ h1, h2 {
 
 
 .intro {
-    margin: 200px;
+    margin-top: 100px;  /* Espacio arriba */
+    margin-bottom: 100px; /* Espacio abajo */
+    margin-left: 200px; /* Espacio a la izquierda */
+    margin-right: 200px; /* Espacio a la derecha */
     font-size: 18px;
     text-align: justify; /* Justifica el texto en todo el ancho disponible */ 
 }
@@ -45,6 +48,7 @@ h1, h2 {
     height: auto;
     border-radius: 10px;
 }
+
 
 figcaption {
     text-align: center;
@@ -155,7 +159,7 @@ nav ul li a:hover {
 }
 
 .nombre:hover {
-    color: #5c374c;
+    color: #5a2d82;
 }
 
 /* Menú de navegación */
@@ -178,22 +182,22 @@ nav ul li a:hover {
 }
 
 .boton.activo {
-    background-color: #5c374c !important;
+    background-color: #5a2d82 !important;
     color: white !important;
-    border-color: #5c374c !important;
+    border-color: #5a2d82 !important;
 }
 
 .boton:hover {
-    background-color: #5c374c;
+    background-color: #5a2d82;
     color: white;
-    border-color: #5c374c;
+    border-color: #5a2d82;
 }
 
 /* Botón activo */
 .activo {
-    background-color: #5c374c;
+    background-color: #5a2d82;
     color: white;
-    border-color: #5c374c;
+    border-color: #5a2d82;
 }
 
 
@@ -231,6 +235,7 @@ nav ul li a:hover {
     border-radius: 10px; /* Bordes redondeados opcionales */
 }
 
+
 .info {
     max-width: 500px; /* Limita el ancho del cuadro de información */
     background-color: #ffffff; /* Fondo suave */
@@ -256,12 +261,12 @@ select {
 }
 
 select:hover {
-    border-color: #5c374c; /* Color del menú principal */
+    border-color: #5a2d82; /* Color del menú principal */
 }
 
 select:focus {
-    border-color: #5c374c;
-    box-shadow: 1px 1px 8px #5c374c80;
+    border-color: #5a2d82;
+    box-shadow: 1px 1px 8px #5a2d8280;
 }
 
 /* Contenedor principal */
@@ -278,6 +283,11 @@ select:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Espacio entre el gráfico y el cuadro de información */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Imagen con la clase .image */
@@ -316,11 +326,11 @@ select:focus {
 /* Cuadro de información */
 .card {
     background-color: white;
-    padding: 15px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%; /* Ajuste de ancho para que coincida con la imagen */
-    text-align: center;
+    text-align: justify;
 }
 
 .container2 {
@@ -370,7 +380,209 @@ footer {
     border-radius: 10px;
 }
 
+.image3 {
+    width: 800px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
 .resaltado {
     background-color: yellow !important; /* Cambia el color de fondo */
     font-weight: bold; /* Opcional: hace que el texto se vea más fuerte */
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido de la ventana emergente */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 1500px;
+    text-align: center;
+    position: relative;
+}
+
+/* Botón de cierre */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón Mostrar Datos */
+.btn {
+    background: white; /* Fondo blanco como los botones superiores */
+    color: black; /* Texto negro */
+    border: 2px solid black; /* Borde negro */
+    padding: 8px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover como los botones de arriba */
+.btn:hover {
+    background: #5a2d82; /* Color morado oscuro al pasar el mouse */
+    color: white;
+}
+
+/* Contenedor de los paneles (Gráfico y Tabla) */
+.contenedor-paneles {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre el gráfico y la tabla */
+    flex-wrap: wrap; /* Permite que se adapten en pantallas pequeñas */
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Estilos para cada panel */
+.panel {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px; /* Evita que se hagan demasiado pequeños */
+    text-align: center;
+}
+
+/* Ajustar tamaño de la imagen del gráfico */
+.panel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Mejorar el diseño de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #5a2d82; /* Color morado */
+    color: white;
+}
+
+/* Panel derecho */
+.resultados resu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px; /* Para mantener un tamaño uniforme */
+}
+
+
+.contenedor-parametros {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr; /* Dos columnas para imágenes, una para la descripción */
+    grid-template-rows: auto auto; /* Dos filas: una para imágenes/descripción y otra para el gráfico */
+    gap: 10px; /* Espacio entre paneles */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar en la página */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center;
+    padding: 20px;
+}
+
+.box2 {
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    min-width: 350px;
+    text-align: center;
+}
+
+/* Paneles generales */
+.panel-corr {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Paneles de imagen */
+.panel-mass {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Panel de descripción */
+.panel-result {
+    grid-column: 3; /* Ocupa la tercera columna */
+    grid-row: 1; /* Se mantiene en la primera fila */
+}
+
+/* Panel del gráfico */
+.panel-orbitas {
+    grid-column: 1 / span 2; /* Ocupa las dos primeras columnas */
+    grid-row: 2; /* Se posiciona en la segunda fila */
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra todo horizontalmente */
+    text-align: left; /* Alinear texto a la izquierda */
+    padding: 50px 15%; /* Espaciado en los lados */
+    background-color: #f4f4f4;
+    min-height: 60vh; /* Ocupar más espacio vertical */
+}
+
+.texto-presentacion {
+    flex: 1.5; /* Ocupar la mitad del espacio disponible */
+    max-width: 80%;
+}
+
+.texto-presentacion h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.texto-presentacion p {
+    font-size: 20px;
+    color: #444;
+}
+
+.imagen-presentacion {
+    flex: 1; /* Ocupar la otra mitad */
+    display: flex;
+    justify-content: right; /* Centrar la imagen dentro del contenedor */
+}
+
+.imagen-presentacion img {
+    width: 250px; /* Ajustar el tamaño */
+    border-radius: 50%;
 }
