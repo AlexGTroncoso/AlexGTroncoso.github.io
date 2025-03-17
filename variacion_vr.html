@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="img/me.jpg" alt="Logo" class="logo">
+                <img src="img/logo2.png" alt="Logo" class="logo">
                 <a href="sobre-mi.html" class="nombre">Alexander GT</a>
             </div>
             <div class="menu">
@@ -62,10 +62,68 @@
 
             <!-- Segundo contenedor: Imagen fija -->
             <div class="box image-box">
+                <button id="mostrar-panel" class="btn">Estrellas estándar</button>
                 <h2 style="margin-top: 40px;">Variación de la VR</h2>
                 <img id = "Imagencentro" src="img/Imagen10_1.png" alt="">
                 <h2 style="margin-top: 40px;"></h2>
             </div>
+
+            <!-- Ventana Emergente (Modal) -->
+            <div id="modal" class="modal">
+                <div class="modal-contenido">
+                    <span id="cerrar-modal" class="cerrar">&times;</span>
+                    <h3>Estrellas estándar en VR</h3>
+                    
+                    <!-- Contenedor para organizar los paneles -->
+                    <div class="contenedor-paneles">
+
+                        <!-- Panel de la tabla -->
+                        <div class="tabla">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Objeto</th>
+                                        <th>Épocas</th>
+                                        <th>V</th>
+                                        <th>⟨VR⟩ ± σ<sub>VR</sub> [km/s]</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HD10700</td>
+                                        <td>6</td>
+                                        <td>3.50</td>
+                                        <td>-16.61 ± 0.02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HD48381</td>
+                                        <td>2</td>
+                                        <td>8.50</td>
+                                        <td>40.52 ± 0.02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HD72673</td>
+                                        <td>25</td>
+                                        <td>6.38</td>
+                                        <td>14.80 ± 0.03</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HD157347</td>
+                                        <td>14</td>
+                                        <td>6.28</td>
+                                        <td>-35.89 ± 0.01</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <!-- Panel del gráfico -->
+                         <div class="panel img">
+                            <img src="img/Estandar en VR.png" alt="Gráfico VR">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- Tercer contenedor: Selector y cambio de imagen -->
             <div class="box selection-box">
