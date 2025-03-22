@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener elementos del DOM
-    let selectEstrellas = document.getElementById("estrellas");
+    let selectEstrellas = document.getElementsByClassName("estrellas");
     let titulo = document.getElementById("estrella-nombre");
     let imagen = document.getElementById("estrellaImagen");
     let imagencentro = document.getElementById("Imagencentro")
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Escuchar cambios en el select
-    selectEstrellas.addEventListener("change", function() {
-        let estrellaSeleccionada = this.value;
-        
+    console.log(selectEstrellas);
+
+    function selectStar(estrellaSeleccionada){
         if (datosEstrellas.hasOwnProperty(estrellaSeleccionada)) {
             titulo.textContent = datosEstrellas[estrellaSeleccionada].titulo;
             imagen.src = datosEstrellas[estrellaSeleccionada].imagen; // Cambiar la imagen
@@ -211,7 +211,14 @@ document.addEventListener("DOMContentLoaded", function() {
             imagencentro.src = "img/Imagen10_1_Krich_1.png"; // Imagen por defecto si no se encuentra la estrella
             limpiarResaltado();
         }
+    }
+    
+    Array.from(selectEstrellas).forEach(select => {
+        select.addEventListener("change", function() {
+            selectStar(this.value);
+        });
     });
+    
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -221,49 +228,6 @@ document.addEventListener("DOMContentLoaded", function() {
     botones.forEach(boton => {
         if (boton.getAttribute("href") === currentPage) {
             boton.classList.add("activo");
-        }
-    });
-});
-
-// ➤ Nueva funcionalidad: Ventana emergente (modal)
-document.addEventListener("DOMContentLoaded", function() {
-    let botonMostrar = document.getElementById("mostrar-panel");
-    let modal = document.getElementById("modal");
-    let cerrarModal = document.getElementById("cerrar-modal");
-
-    botonMostrar.addEventListener("click", function() {
-        modal.style.display = "flex"; // Muestra la ventana emergente
-    });
-
-    cerrarModal.addEventListener("click", function() {
-        modal.style.display = "none"; // Oculta la ventana emergente
-    });
-
-    // Cerrar la ventana si se hace clic fuera del contenido
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    let botonMostrar = document.getElementById("mostrar-panel1");
-    let modal = document.getElementById("modal1");
-    let cerrarModal = document.getElementById("cerrar-modal1");
-
-    botonMostrar.addEventListener("click", function() {
-        modal.style.display = "flex"; // Muestra la ventana emergente
-    });
-
-    cerrarModal.addEventListener("click", function() {
-        modal.style.display = "none"; // Oculta la ventana emergente
-    });
-
-    // Cerrar la ventana si se hace clic fuera del contenido
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
         }
     });
 });

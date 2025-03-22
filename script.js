@@ -235,25 +235,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-// ➤ Nueva funcionalidad: Ventana emergente (modal)
-document.addEventListener("DOMContentLoaded", function() {
-    let botonMostrar = document.getElementById("mostrar-panel");
-    let modal = document.getElementById("modal");
-    let cerrarModal = document.getElementById("cerrar-modal");
-
-    botonMostrar.addEventListener("click", function() {
-        modal.style.display = "flex"; // Muestra la ventana emergente
-    });
-
-    cerrarModal.addEventListener("click", function() {
-        modal.style.display = "none"; // Oculta la ventana emergente
-    });
-
-    // Cerrar la ventana si se hace clic fuera del contenido
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});

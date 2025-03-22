@@ -1,18 +1,12 @@
-body {
+html,body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
+    overflow-x: hidden;
 }
-
-/* body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e0e0e0;
-} */
 
 header {
     background-color: #d9d9d9;
@@ -24,6 +18,9 @@ h1, h2 {
     margin: 10px 0;
 }
 
+img{
+    max-width: 100%;
+}
 
 .intro {
     margin-top: 100px;  /* Espacio arriba */
@@ -31,12 +28,10 @@ h1, h2 {
     margin-left: 200px; /* Espacio a la izquierda */
     margin-right: 200px; /* Espacio a la derecha */
     font-size: 18px;
-    text-align: justify; /* Justifica el texto en todo el ancho disponible */ 
 }
 
 .intro-new{
     font-size: 18px;
-    text-align: justify;
 }
 
 .content {
@@ -131,15 +126,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f39c12;  /* Cambio de color al pasar el cursor */
-}
-
-/* Barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d9d9d9;
-    padding: 10px 100px;
 }
 
 /* Contenedor del logo y nombre */
@@ -296,10 +282,9 @@ select:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen con la clase .image */
 .image {
-    width: 500px; /* Ajusta el tamaño de la imagen */
-    height: auto;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
 }
 
@@ -314,8 +299,8 @@ select:focus {
 /* Contenedor del selector */
 .selection-container {
     display: flex;
-    align-items: center; /* Alinea el texto y el select */
-    gap: 10px; /* Espacio entre el label y el select */
+    align-items: center;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
@@ -331,12 +316,7 @@ select:focus {
 
 /* Cuadro de información */
 .card {
-    background-color: white;
-    padding: 50px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%; /* Ajuste de ancho para que coincida con la imagen */
-    text-align: justify;
 }
 
 .container2 {
@@ -354,6 +334,7 @@ select:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 40%;
     min-width: 280px;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -469,6 +450,7 @@ footer {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     flex: 1;
     min-width: 300px; /* Evita que se hagan demasiado pequeños */
+    max-width: 100%;
     text-align: center;
 }
 
@@ -528,6 +510,7 @@ th {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 95%;
     min-width: 350px;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -583,12 +566,19 @@ th {
 }
 
 .imagen-presentacion {
-    flex: 1; /* Ocupar la otra mitad */
-    display: flex;
-    justify-content: right; /* Centrar la imagen dentro del contenedor */
+    /* display: flex; */
+    /* justify-content: right; */
 }
 
 .imagen-presentacion img {
     width: 250px; /* Ajustar el tamaño */
     border-radius: 50%;
+}
+
+.modal-backdrop{
+    z-index: 999 !important;
+}
+
+.mjx-chtml.MathJax_CHTML{
+    font-size: 100% !important;
 }

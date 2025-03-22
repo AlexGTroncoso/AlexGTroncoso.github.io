@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let titulo = document.getElementById("estrella-nombre");
     let imagen = document.getElementById("estrellaImagen");
     let imagencentro = document.getElementById("Imagencentro")
-    let tablaFilas = document.querySelectorAll(".table-box tbody tr"); // Todas las filas de la tabla
+    let tablaFilas = document.querySelectorAll(".star-clasification tbody tr"); // Todas las filas de la tabla
 
     // Definir información de las estrellas
     let datosEstrellas = {
@@ -82,28 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
     botones.forEach(boton => {
         if (boton.getAttribute("href") === currentPage) {
             boton.classList.add("activo");
-        }
-    });
-});
-
-// ➤ Nueva funcionalidad: Ventana emergente (modal)
-document.addEventListener("DOMContentLoaded", function() {
-    let botonMostrar = document.getElementById("mostrar-panel");
-    let modal = document.getElementById("modal");
-    let cerrarModal = document.getElementById("cerrar-modal");
-
-    botonMostrar.addEventListener("click", function() {
-        modal.style.display = "flex"; // Muestra la ventana emergente
-    });
-
-    cerrarModal.addEventListener("click", function() {
-        modal.style.display = "none"; // Oculta la ventana emergente
-    });
-
-    // Cerrar la ventana si se hace clic fuera del contenido
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
         }
     });
 });
