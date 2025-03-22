@@ -582,3 +582,7 @@ th {
 .mjx-chtml.MathJax_CHTML{
     font-size: 100% !important;
 }
+
+.fixed-top{
+    z-index: 999;
+}
