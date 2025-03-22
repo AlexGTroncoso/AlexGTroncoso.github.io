@@ -266,8 +266,8 @@ select:focus {
     display: flex;
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     justify-content: center;
-    gap: 20px; /* Espacio entre el gráfico y el cuadro de información */
-    padding: 20px;
+    gap: 20px;
+    padding: 8px;
 }
 
 /* Panel izquierdo */
