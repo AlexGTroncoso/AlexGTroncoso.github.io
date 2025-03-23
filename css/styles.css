@@ -283,7 +283,6 @@ select:focus {
 
 /* Contenedor principal */
 .container {
-    display: flex;
     align-items: center; /* Alinea los elementos en la parte superior */
     justify-content: center;
     gap: 20px;
