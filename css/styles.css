@@ -335,8 +335,9 @@ select:focus {
 
 /* Estilo de las imágenes */
 .tools-container-grupos img {
-    width: 350px;
     max-width: 350px;
+    max-height: 150px;
+    object-fit: contain;
     margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 
@@ -609,8 +610,8 @@ th, td {
 }
 
 th {
-    background-color: #5a2d82; /* Color morado */
-    color: white;
+    background-color: #5a2d82 !important; /* Color morado */
+    color: white !important;
 }
 
 /* Panel derecho */
@@ -738,4 +739,18 @@ th {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #5a2d82 !important;
     --bs-btn-disabled-border-color: #5a2d82 !important;
+}
+
+.card-parameters{
+    min-width: 337px;
+}
+
+
+@media (max-width: 768px) {
+    .conainer-parameter{
+        padding: 10px;
+    }
+    .mjx-chtml.MathJax_CHTML{
+        font-size: 85%;
+    }
 }
