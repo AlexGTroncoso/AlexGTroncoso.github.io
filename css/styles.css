@@ -53,6 +53,12 @@ img{
     border-radius: 10px;
 }
 
+.scroll-container {
+    width: 100%; /* Se adapta al ancho del contenedor */
+    overflow-x: auto; /* Agrega el scroll horizontal */
+    white-space: nowrap; /* Evita que la imagen se ajuste automáticamente */
+}
+
 .image-Organigrama {
     width: 800px; /* Ajusta el tamaño de la imagen */
     max-width: 800px;
@@ -297,7 +303,11 @@ select:focus {
     font-weight: bold;
     padding: 10px;
 }
-
+.centrar-texto {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; /* Opcional, para centrar también horizontalmente */
+}
 
 /* Contenedor centrado */
 .tools-container {
@@ -601,12 +611,29 @@ table {
     margin-top: 10px;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
+    text-align: center;
+}
+
+/* Ajustar celdas para que sean más compactas */
+.table th, .table td {
+    padding: 5px; /* Reduce el espacio dentro de cada celda */
+    white-space: nowrap; /* Evita que las celdas ocupen varias líneas */
+    align-items: center;
+    justify-content: center;    
+}
+
+/* Ajustar el contenedor de la tabla */
+.tabla {
+    max-width: 100%; /* Evita que la tabla sea demasiado ancha */
+    overflow-x: auto; /* Agrega un scroll horizontal si es necesario */
+    
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+
 }
 
 th {
