@@ -16,7 +16,7 @@
     <header class="mb-3">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="sobre-mi.html">
+                <a class="navbar-brand horizontal-brand" href="sobre-mi.html">
                     <img src="img/logo2.png" alt="Logo" width="40" class="d-inline-block align-text-top">
                     Alexander GT
                 </a>
@@ -38,9 +38,12 @@
     <div class="container">
         <main class="my-5">
             <section class="intro-new row mb-5">
+                <h2 class = 'centrar'>Análisis de posibles compañeras en estrellas químicamente peculiares a partir de las variaciones de la velocidad radial</h2>
+                <br>
                 <div class="col-md-12 text-start">
-                    <h2>Abstract</h2>
-                    <p>Reportamos la identificación de ocho objetos con variabilidad en velocidad radial y peculiaridades
+                    <br>
+                    <h2><b>Abstract</b></h2>
+                    <p class="justificar">Reportamos la identificación de ocho objetos con variabilidad en velocidad radial y peculiaridades
                         químicas, cuya variabilidad excede la incertidumbre
                         instrumental del espectrógrafo FIDEOS. Estudios previos han explorado la posibilidad de que el
                         enriquecimiento químico observado en algunas estrellas
@@ -64,18 +67,42 @@
                         resultados sugieren que el enriquecimiento químico característico
                         de estas estrellas peculiares podría estar vinculado a una diversa gama de compañeros binarios, que
                         incluyen objetos estelares, subestelares y planetarios.</p>
+
+                        <p><b>Palabras Clave: </b><em>estrellas: químicamente peculiares / estrellas: evolución / binarias: general / binarias: compañeras subestelares / binarias: compañeras planetarias / técnicas: espectroscópicas / técnicas: velocidad radial</em></p>
+
                 </div>
             </section>
             
             <hr>
 
+            <div class="tools-container">
+                    <a href="https://thejoker.readthedocs.io/en/latest/" target="_blank">
+                        <img src="img/thejoker" alt="The Joker Logo" width="30"> The Joker
+                    </a>
+                    <a href="https://www.blancocuaresma.com/s/iSpec" target="_blank">
+                        <img src="img/ispec.png" alt="iSpec Logo" width="30"> iSpec
+                    </a>
+                    <a href="https://github.com/TUCAN1/docker4ceres" target="_blank">
+                        <img src="img/docker.png" alt="Docker4Ceres Logo" width="30">Ceres
+                    </a>
+                    <a href="https://www.python.org/" target="_blank">
+                        <img src="img/python.png" alt="Python Logo" width="30"> Python
+                    </a>
+                    <a href="https://github.com/AlexGTroncoso/Proyecto-FACom/blob/c66298d10abd6dfaee4819ca74bde05a09704898/Joven_Investigador/Trabajo_de_grado_Alexander_Gonz%C3%A1lez_Troncoso%20(1).pdf" target="_blank">
+                        <img src="img/pdf.png", alt="Pdf Logo"> Tesis
+                    </a>
+            </div>
+
+            <hr>
             <section class="intro-new row align-items-top mt-5">
                 <div class="col-md-4 text-center">
+                    <br> <br> <br>
                     <img src="img/FIDEOS2.jpg" alt="Descripción de la imagen" class="img-fluid rounded">
                     <figcaption class="text-muted">Créditos: Equipo de FIDEOS, Observatorio de La Silla.</figcaption>
+                    <br> <br>    
                 </div>
                 <div class="col-md-8">
-                    <h2>Instrumentos</h2>
+                    <h2><b>Instrumentos</b></h2>
                     <p>
                         Los espectros utilizados en este estudio fueron obtenidos con el espectrógrafo FIDEOS, que opera
                         a una resolución de \( R \sim 43000 \) en el rango
@@ -87,7 +114,7 @@
                         FIDEOS está estabilizado térmicamente y montado sobre soportes antivibración para garantizar
                         alta estabilidad en las mediciones. La estabilidad en la
                         velocidad radial (RV) es ligeramente inferior a \(30\) km/h en múltiples noches consecutivas de
-                        observación (<a href="#ref1">Vanzi et al. 2018</a>).
+                        observación (<a href="https://academic.oup.com/mnras/article/477/4/5041/5002907">Vanzi et al. 2018</a>).
                     </p>
 
                     <p>
@@ -106,7 +133,7 @@
                         Elementales para Espectros Échelle, conocida por su acrónimo en inglés CERES.
                         El objetivo principal de estas rutinas es desarrollar procesos completamente automatizados
                         capaces de generar espectros extraídos y homogeneizados de
-                        manera óptima (<a href="#ref2">Brahm et al. 2017</a>).
+                        manera óptima (<a href="https://doi.org/10.3847/1538-3881/ab279a">Brahm et al. 2017</a>).
                     </p>
 
                     <p>
@@ -114,13 +141,47 @@
                         y \(114\), con un promedio de \(33\). Estos valores
                         corresponden principalmente a estrellas de tipo G, para las cuales se usaron tiempos de
                         exposición de \(1800\) s en la mayoría de los objetivos
-                        (ver <a href="#tab:objects_observation">Tabla de objetos observados</a>).
+                        (ver tabla).
                         Estos parámetros de observación fueron seleccionados para lograr un buen equilibrio entre la
                         calidad de la señal y el tiempo total de observación,
                         asegurando una cobertura adecuada de las características espectroscópicas de las estrellas, en
                         particular las variaciones en RV, que son cruciales
                         para analizar la presencia de compañeros estelares o subestelares.
+                        <br><br>
                     </p>
+                </div>
+                
+                <hr>
+                <br><br>
+                <div class="tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>ID</th>
+                                <th>T. Esp</th>
+                                <th>V</th>
+                                <th>T. Exp [s]</th>
+                                <th>N° de Obs</th>
+                                <th>R. S/N</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Krich-1</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC22-591-1">TYC22-591-1</a></td><td>...</td><td>10.950</td><td>1800</td><td>3</td><td>17</td></tr>
+                            <tr><td>Krich-2</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC26-777-1">TYC26-777-1</a></td><td>G5</td><td>9.760</td><td>1800</td><td>4</td><td>27-44</td></tr>
+                            <tr><td>Na-rich</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC6908-1643-1">TYC6908-1643-1</a></td><td>...</td><td>10.400</td><td>1800</td><td>4</td><td>31-54</td></tr>
+                            <tr><td>Nrich-1</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC4686-2039-1">TYC4686-2039-1</a></td><td>...</td><td>11.204</td><td>1800</td><td>4</td><td>14-27</td></tr>
+                            <tr><td>Nrich-2</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC8517-1671-1">TYC8517-1671-1</a></td><td>...</td><td>10.701</td><td>1800</td><td>5</td><td>24-34</td></tr>
+                            <tr><td>Nrich-3</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC244-273-1">TYC244-273-1</a></td><td>...</td><td>10.650</td><td>1800</td><td>6</td><td>19-39</td></tr>
+                            <tr><td>Nrich-4</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC250-1352-1">TYC250-1352-1</a></td><td>...</td><td>11.410</td><td>1800</td><td>3</td><td>17-29</td></tr>
+                            <tr><td>Nrich-5</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC269-474-1">TYC269-474-1</a></td><td>...</td><td>10.730</td><td>1800</td><td>6</td><td>20-36</td></tr>
+                            <tr><td>Nrich-6</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC7408-694-1">TYC7408-694-1</a></td><td>...</td><td>11.040</td><td>1800</td><td>3</td><td>31-39</td></tr>
+                            <tr><td>Nrich-7</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC5256-183-1">TYC5256-183-1</a></td><td>...</td><td>10.689</td><td>1800</td><td>8</td><td>22-29</td></tr>
+                            <tr><td>Nrich-8</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC8525-512-1">TYC8525-512-1</a></td><td>...</td><td>11.400</td><td>1800</td><td>3</td><td>15-24</td></tr>
+                            <tr><td>Si-rich</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC5805-233-1">TYC5805-233-1</a></td><td>...</td><td>10.620</td><td>1800</td><td>19</td><td>24-48</td></tr>
+                            <tr><td>s-rich</td><td><a href="http://cdsportal.u-strasbg.fr/?target=TYC6524-876-1">TYC6524-876-1</a></td><td>G(II)wp(Ba)</td><td>8.400</td><td>1400</td><td>8</td><td>63-114</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </main>
