@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Na-rich": {
             titulo: "Na-rich",
             parametros: {
-                "ID-TYC": "TYC6908-1643-1",
+                "ID": "TYC6908-1643-1",
                 APOGEE: "...",
                 FIDEOS: "-80.62 ± 0.62~ [km ~s^{-1}]",
                 T_m: "44.26~[min]",
@@ -52,14 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 Φ_0: "2.02_{-4.07}^{+0.19} ~ [deg]",
                 K: "0.85_{-0.20}^{+4.73} ~ [km ~ s^{-1}]",
                 V_0: "-80.6_{-2.2}^{+1.5} ~ [km ~ s^{-1}]",
-                Mass: "0.073_{-0.048}^{+0.352} ~ [M_{sun}]",
-                Compañera: "Posible compañera subestelar"
+                Mass: "0.073_{-0.048}^{+0.352} ~ [M_{sun}]"
             }
         },
         "N-rich 1": {
             titulo: "N-rich 1",
             parametros: {
-                "ID-TYC": "TYC4686-2039-1",
+                "ID": "TYC4686-2039-1",
                 APOGEE: "156.34 ± 0.03~ [km ~s^{-1}]",
                 FIDEOS: "148.28 ± 0.79~ [km ~s^{-1}]",
                 T_m: "42.24~[min]",
@@ -71,14 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 Φ_0: "-1.2461_{-0.0022}^{+0.0018} ~[deg]",
                 K: "24.04_{-0.03}^{+0.04} ~[km ~s^{-1}]",
                 V_0: "150.840_{-0.002}^{+0.010} ~[km ~s^{-1}]",
-                Mass: "0.5174_{-0.0021}^{+0.0024} ~[M_{sun}]",
-                Compañera: "Posible estelar compacta"
-            }
+                Mass: "0.5174_{-0.0021}^{+0.0024} ~[M_{sun}]"            }
         },
         "N-rich 2": {
             titulo: "N-rich 2",
             parametros: {
-                "ID-TYC": "TYC8517-1671-1",
+                "ID": "TYC8517-1671-1",
                 APOGEE: "49.36 ± 0.02 ~ [km ~s^{-1}]",
                 FIDEOS: "48.71 ± 0.20~ [km ~s^{-1}]",
                 T_m: "42.13~[min]",
@@ -89,14 +86,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 ω: "2.58_{-3.61}^{+2.13} ~[deg]",
                 Φ_0: "1.39_{-3.32}^{+0.65} ~[deg]",
                 K: "0.65_{-0.15}^{+0.16} ~[km ~s^{-1}]",
-                V_0: "48.904_{-0.015}^{+0.121} ~[km~ s*^{-1}]",
+                V_0: "48.904_{-0.015}^{+0.121} ~[km~ s^{-1}]",
                 Mass: "0.0078_{-0.0009}^{+0.0034} ~[M_{sun}]"
             }
         },
         "N-rich 3": {
             titulo: "N-rich 3",
             parametros: {
-                "ID-TYC": "TYC244-273-1",
+                "ID": "TYC244-273-1",
                 APOGEE: "96.30 ± 0.03~ [km ~s^{-1}]",
                 FIDEOS: "97.53 ± 0.24 ~ [km ~s^{-1}]",
                 T_m: "42.18~[min]",
@@ -107,14 +104,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 ω: "0.86_{-0.62}^{+1.95} ~[deg]",
                 Φ_0: "-1.93_{-0.56}^{+3.66} ~[deg]",
                 K: "0.86_{-0.03}^{+0.41} ~[km~ s^{-1}]",
-                V_0: "97.10_{-0.34}^{+0.16} ~[km ~s*^{-1}]",
+                V_0: "97.10_{-0.34}^{+0.16} ~[km ~s^{-1}]",
                 Mass: "0.030_{-0.002}^{+0.013} ~[M_{sun}]"
             }
         },
         "N-rich 4": {
             titulo: "N-rich 4",
             parametros: {
-                "ID-TYC": "TYC250-1352-1",
+                "ID": "TYC250-1352-1",
                 APOGEE: "−16.27 ± 0.04~ [km ~s^{-1}]",
                 FIDEOS: "−17.51 ± 0.98 ~ [km ~s^{-1}]",
                 T_m: "41.39~[min]",
@@ -132,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "N-rich 7": {
             titulo: "N-rich 7",
             parametros: {
-                "ID-TYC": "TYC5256-183-1",
+                "ID": "TYC5256-183-1",
                 APOGEE: "-70.42 ± 0.01",
                 FIDEOS: "−70.51 ± 0.15 ~ [km ~s^{-1}]",
                 T_m: "42.84~[min]",
@@ -143,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 ω: "2.87_{-5.53}^{+0.41} ~[deg]",
                 Φ_0: "2.856_{-5.582}^{+0.007} ~[deg]",
                 K: "0.216_{-0.008}^{+0.015} ~[km ~s^{-1}]",
-                V_0: "-70.41510_{-0.02510}^{+0.00001} ~[km ~s^{-1}]",
-                Mass: "0.00197_{-0.00005}^{+0.00014}~ [M_{sun}]"
+                V_0: "-70.415_{-0.025}^{+0.000} ~[km ~s^{-1}]",
+                Mass: "0.002_{-0.0001}^{+0.0001}~ [M_{sun}]"
             }
         },
         "N-rich 8": {
             titulo: "N-rich 8",
             parametros: {
-                "ID-TYC": "TYC8525-512-1",
+                "ID": "TYC8525-512-1",
                 APOGEE: "-70.42 ± 0.01",
                 FIDEOS: "−70.51 ± 0.15 ~ [km ~s^{-1}]",
                 T_m: "42.74~[min]",
@@ -169,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Si-rich": {
             titulo: "Si-rich",
             parametros: {
-                "ID-TYC": "TYC5805-233-1",
+                "ID": "TYC5805-233-1",
                 APOGEE: "−172.24 ± 0.04~ [km ~s^{-1}]",
                 FIDEOS: "−166.50 ± 0.22~ [km ~s^{-1}]",
                 T_m: "48.17~[min]",
