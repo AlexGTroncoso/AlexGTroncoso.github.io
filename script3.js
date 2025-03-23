@@ -3,12 +3,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let selectEstrellas = document.getElementsByClassName("estrellas");
     let titulo = document.getElementById("estrella-nombre");
     let imagen = document.getElementById("estrellaImagen");
-    let imagencentro = document.getElementById("Imagencentro")
-    let imagenorbita = document.getElementById("ImagenOrbita")
-    let imagenpar = document.getElementById("ImagenParametros")
-    let imagenfase = document.getElementById("ImagenFase")
+    let imagencentro = document.getElementById("Imagencentro");
+    let imagenorbita = document.getElementById("ImagenOrbita");
+    let imagenpar = document.getElementById("ImagenParametros");
+    let imagenfase = document.getElementById("ImagenFase");
+    let acompañante = document.getElementById("Acompañante");
+    let descripcion = document.getElementById("Descripcion");
 
     let parametros = document.getElementById("parametros");
+    
     // Definir información de las estrellas
     let datosEstrellas = {
         "Na-rich": { titulo: "Na-rich", imagen: "img/Corr_Narich.png" , imagencentro: "img/Mass_Narich.png", imagenorbita: "img/Filtrado_Narich.png", imagenpar: "img/Parametros_Narich.png", imagenfase: "img/Phase_Narich.png"},
@@ -19,6 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
         "N-rich 7": { titulo: "N-rich 7", imagen: "img/Corr_Nrich7.png" , imagencentro: "img/Mass_Nrich7.png",imagenorbita: "img/Filtrado_Nrich7.png", imagenpar: "img/Parametros_Nrich7.png", imagenfase: "img/Phase_Nrich7.png"},
         "N-rich 8": { titulo: "N-rich 8", imagen: "img/Corr_Nrich8.png" , imagencentro: "img/Mass_Nrich8.png",imagenorbita: "img/Filtrado_Nrich8.png", imagenpar: "img/Parametros_Nrich8.png", imagenfase: "img/Phase_Nrich8.png"},
         "Si-rich": { titulo: "Si-rich", imagen: "img/Corr_Sirich.png" , imagencentro: "img/Mass_Sirich.png", imagenorbita: "img/Filtrado_Sirich.png", imagenpar: "img/Parametros_Sirich.png", imagenfase: "img/Phase_Sirich.png"},
+    };
+
+    let acompañanteEstrellas = {
+        "Na-rich": { titulo: "Na-rich", acompañante:"Posible compañera subestelar" , descripcion: "Las enanas marrones, tienen masas que oscilan entre 0.013 y 0.073 [M☉]"},
+        "N-rich 1": { titulo: "N-rich 1", acompañante:"Posible compañera estelar compacta", descripcion: "Las enanas blancas, tienen masas que oscilan entre 0.17 y 1.33 [M☉]"},
+        "N-rich 2": { titulo: "N-rich 2", acompañante:"Posible compañero planetario", descripcion: "Podemos estar hablando de objetos jovianos entre 2 a 8 [MJ]"},
+        "N-rich 3": { titulo: "N-rich 3", acompañante:"Posible compañera subestelar", descripcion: "Las enanas marrones, tienen masas que oscilan entre 0.013 y 0.073 [M☉]"},
+        "N-rich 4": { titulo: "N-rich 4", acompañante:"Posible compañera estelar", descripcion: "Las enanas rojas tienen masas en un rango que va desde 0.08 hasta 0.5 [M☉]"},
+        "N-rich 7": { titulo: "N-rich 7", acompañante:"Posible compañera planetario", descripcion: "Podemos estar hablando de objetos jovianos entre 2 a 8 [MJ]"},
+        "N-rich 8": { titulo: "N-rich 8", acompañante:"Posible compañera subestelar", descripcion: "Las enanas marrones, tienen masas que oscilan entre 0.013 y 0.073 [M☉]"},
+        "Si-rich": { titulo: "Si-rich", acompañante:"Posible compañera estelar", descripcion: "Las enanas rojas tienen masas en un rango que va desde 0.08 hasta 0.5 [M☉]" }
     };
 
     // Definir información de las estrellas
@@ -38,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 Φ_0: "2.02_{-4.07}^{+0.19} ~ [deg]",
                 K: "0.85_{-0.20}^{+4.73} ~ [km ~ s^{-1}]",
                 V_0: "-80.6_{-2.2}^{+1.5} ~ [km ~ s^{-1}]",
-                Mass: "0.03_{-0.02}^{+0.12} ~ [M_{sun}]"
+                Mass: "0.073_{-0.048}^{+0.352} ~ [M_{sun}]",
+                Compañera: "Posible compañera subestelar"
             }
         },
         "N-rich 1": {
@@ -56,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 Φ_0: "-1.2461_{-0.0022}^{+0.0018} ~[deg]",
                 K: "24.04_{-0.03}^{+0.04} ~[km ~s^{-1}]",
                 V_0: "150.840_{-0.002}^{+0.010} ~[km ~s^{-1}]",
-                Mass: "0.5174_{-0.0021}^{+0.0024} ~[M_{sun}]"
+                Mass: "0.5174_{-0.0021}^{+0.0024} ~[M_{sun}]",
+                Compañera: "Posible estelar compacta"
             }
         },
         "N-rich 2": {
@@ -146,7 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 Φ_0: "0.19_{-2.39}^{+1.85} ~[deg]",
                 K: "1.43_{-0.20}^{+0.63} ~[km~ s^{-1}]",
                 V_0: "97.31_{-0.61}^{+0.40} ~[km ~s^{-1}]",
-                Mass: "0.016_{-0.003}^{+0.005} ~[M_{sun}]"
+                Mass: "0.016_{-0.003}^{+0.005} ~[M_{sun}]",
+                
             }
         },
         "Si-rich": {
@@ -188,6 +205,9 @@ document.addEventListener("DOMContentLoaded", function() {
             imagenorbita.src = datosEstrellas[estrellaSeleccionada].imagenorbita; // Cambiar la imagen
             imagenpar.src = datosEstrellas[estrellaSeleccionada].imagenpar;
             imagenfase.src = datosEstrellas[estrellaSeleccionada].imagenfase;
+            acompañante.textContent = acompañanteEstrellas[estrellaSeleccionada].acompañante;
+            descripcion.textContent = acompañanteEstrellas[estrellaSeleccionada].descripcion;
+
             let parametrosHTML = "\\[ \\begin{aligned}";
             let parametrosObjeto = parametrosEstrellas[estrellaSeleccionada].parametros;
             
